@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@import "color.scss";
+@import "reset.scss";
+@import "mixin.scss";
+
+.prev {
+  @include Seoul;
+
+  &::before {
+    left: 0;
+    transform: rotate(-30deg);
+    transform-origin: left center;
+
+    @include Incheon;
+  }
+
+  &::after {
+    left: 0;
+    transform: rotate(30deg);
+    transform-origin: left center;
+
+    @include Incheon;
+  }
+
+  strong {
+    transform: translate(100%, -50%);
+
+    @include Daegu;
+  }
+
+  &:hover {
+    @include Busan;
+  }
+}
+
+.next {
+  @include Seoul;
+
+  &::before {
+    right: 0;
+    transform: rotate(30deg);
+    transform-origin: right center;
+
+    @include Incheon;
+  }
+
+  &::after {
+    right: 0;
+    transform: rotate(-30deg);
+    transform-origin: right center;
+
+    @include Incheon;
+  }
+
+  strong {
+    transform: translate(-200%, -50%);
+
+    @include Daegu;
+  }
+
+  &:hover {
+    @include Busan;
+  }
+}
